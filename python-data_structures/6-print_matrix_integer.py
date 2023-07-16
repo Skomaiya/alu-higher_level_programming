@@ -4,4 +4,5 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-print("The matrix is " {:d}.format(matrix))
+for i in matrix:
+    print("The matrix is " {:d}.format(i))
