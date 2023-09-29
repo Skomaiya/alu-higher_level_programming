@@ -1,6 +1,6 @@
 #!/usr/bin/node
 module.exports = class Square extends require('./5-square.js') {
-	  charPrint(c){
+	  charPrint (c) {
     const character = c || 'X';
     for (let i = 0; i < this.height; i++) {
       console.log(character.repeat(this.width));
