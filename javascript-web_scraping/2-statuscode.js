@@ -1,17 +1,17 @@
 #!/usr/bin/node
-const request = require('request');
+  const request = require('request');
 
-function displayStatusCode(url) {
-  request.get(url, (error, response) => {
-    if (error) {
-      console.error('Error:', error.message);
-    } else {
-      console.log('Status code:', response.statusCode);
-    }
-  });
-}
+  if (process.argv.length !== 3) {
+    console.error('Usage: node readFile.js <file_path>');
+    process.exit(1);
+  }
 
-const urlToRequest = 'https://alu-intranet.hbtn.io/status'; // Replace with the URL you want to request
+  const url = process.argv[2];
 
-displayStatusCode(urlToRequest);
-
+    request.get(url, (error, response) => {
+      if (error) {
+        console.error('Error:', error.message);
+      } else {
+        console.log('Status code:', response.statusCode);
+      }
+    });
