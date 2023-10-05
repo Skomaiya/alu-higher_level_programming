@@ -1,2 +1,3 @@
-const elements = document.getElementsByTagName('header');
-elements.style.color = '#FF0000';
+$(document).ready(function(){
+  $('header').style.color = '#FF0000';
+});
