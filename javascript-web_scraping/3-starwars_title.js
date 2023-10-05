@@ -22,4 +22,3 @@ request.get(apiUrl, (error, response, body) => {
     }
   }
 });
-
